@@ -5,7 +5,12 @@ This is the code of Aligning Synchrosqueezing Transform (ASST), which is the sub
 This code is based on pytorch, which can generate the highly-concentrated time-frequency representation in parallel.
 
 Func "ASST":           original ASST
+
 Func "SST_parellel":   SST in parallel
+
 Func "ASST_parellel":  ASST in parallel
+
 Func "iASST":          the inverse ASST when the hop is greater than 1
+
 Func "iASST_2":        the inverse ASST when the hop is equal to 1
+
