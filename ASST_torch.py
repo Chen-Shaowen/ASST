@@ -422,7 +422,7 @@ if __name__ == "__main__":
     pi=math.pi
     Sig = np.cos(2*pi*50*t) + np.cos(2*pi*(17*t + 6*np.sin(1.5*t))) + np.cos(2*pi*(40*t + 1*np.sin(1.5*t)))
     Sig = torch.from_numpy(Sig).to("cuda:0").unsqueeze(0)
-    Tx2,omega2,stft,time,freq = ASST_parellel(Sig, nfft, hop, fs, sigma, Fmax = fmax,fast_inverse=True)
+    Tx2,omega2,stft,time,freq = ASST_parellel(Sig, nfft, hop, fs, sigma, Fmax = fmax,fast_inverse=False)
     # Tx2,omega2,stft,time,freq = ASST_fast(speech, nfft, hop, fs, sigma)
 
     Re = iASST(Tx2,nfft,fs,sigma,hop,Sig.shape[-1])
