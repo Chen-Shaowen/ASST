@@ -1,17 +1,17 @@
 function [Tx,omega,STFT,time,freq] = MeinSST2_2(signal,fs,sigma,Fmax)
 % Diese Programm ist Aligning Synchrosqueezing.
 % Parameters:
-%     Signal ist das signal. ĞÅºÅ  signal
-%     fs ist die Abtastrate des Signal.   ²ÉÆµ  sampling rate
-%     sigma ist das Koeffizient der Gaussscher Fensterweite. ´°º¯Êı²ÎÊı sigma of gaussian window
-%     hop ist die Verlagerung des Fenster.  ´°ÒÆ¾àÀë  time-shift
-%     Fmax ist die Maximalwert der Frequenz.   ×î´óÆµÂÊ×ø±ê  maxvalue of the frequency axis
+%     Signal ist das signal. ä¿¡å·  signal
+%     fs ist die Abtastrate des Signal.   é‡‡é¢‘  sampling rate
+%     sigma ist das Koeffizient der Gaussscher Fensterweite. çª—å‡½æ•°å‚æ•° sigma of gaussian window
+%     hop ist die Verlagerung des Fenster.  çª—ç§»è·ç¦»  time-shift
+%     Fmax ist die Maximalwert der Frequenz.   æœ€å¤§é¢‘ç‡åæ ‡  maxvalue of the frequency axis
 % 
-%     Tx ist das Resultat. Ê±ÆµÍ¼ TF representation    
-%     omega isT der IF Operator. Ë²Ê±ÆµÂÊ¹À¼ÆËã×Ó IF estimator
-%     STFT ist der STFT. ¶ÌÊ±¸µÀïÒ¶±ä»»  STFT
-%     time ist die Zeit. Ê±¼äÖá  time axis
-%     freq ist die Frequenz. ÆµÂÊÖá  frequency axis
+%     Tx ist das Resultat. æ—¶é¢‘å›¾ TF representation    
+%     omega isT der IF Operator. ç¬æ—¶é¢‘ç‡ä¼°è®¡ç®—å­ IF estimator
+%     STFT ist der STFT. çŸ­æ—¶å‚…é‡Œå¶å˜æ¢  STFT
+%     time ist die Zeit. æ—¶é—´è½´  time axis
+%     freq ist die Frequenz. é¢‘ç‡è½´  frequency axis
 %     
 %     @Autor: Shaowen Chen
 %     2020.12.15
