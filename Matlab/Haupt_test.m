@@ -3,10 +3,10 @@ close all
 clear all;
 % randn('state',1)
 %%
-%ĞÅºÅÉú³ÉÓëÊä³ö
+%ä¿¡å·ç”Ÿæˆä¸è¾“å‡º
 fs=1024;
 t=1/fs:1/fs:1; 
-%ĞÅºÅ
+%ä¿¡å·
 t1=t(1:fs/2);
 t2=t((fs/2+1):fs);
 signal7 = [cos(400*pi*t1-300*pi*t1.^2) cos(400*pi*t2-600*pi*t2.^2+400*pi*t2.^3+pi)];
@@ -30,17 +30,17 @@ signal = signal7 + signal8;
 frequency1 = [(200-300*t1) (200-600*t2+600*t2.^2)];
 frequency2 = 350+80*t.*cos(8*pi*t.^2);
 
-%ÔëÉù
+%å™ªå£°
 % signal=awgn(signal,30);
-freqN = fs/2*linspace(0,1,fs/2); %ÆµÂÊ×ø±ê
+freqN = fs/2*linspace(0,1,fs/2); %é¢‘ç‡åæ ‡
 
-figure('NumberTitle','off','Name','Ô­ĞÅºÅ')
+figure('NumberTitle','off','Name','åŸä¿¡å·')
 plot(t,signal,'b')
 ylabel('Amp / mm');
 xlabel('Time / Sec');
-title('Ô­ĞÅºÅ')
+title('åŸä¿¡å·')
 
-figure('NumberTitle','off','Name','Ô­ĞÅºÅÆµÂÊ')
+figure('NumberTitle','off','Name','åŸä¿¡å·é¢‘ç‡')
 plot(t,frequency1,'r');hold on;
 plot(t,frequency2,'r');
 ylabel('Freq / Hz');
@@ -68,7 +68,7 @@ sigma = 0.008;
 % [Tx1,Tx3,Tx4,Tx5,omega1,omega3,omega4,omega5,STFT] = SST_N(signal',fs);
 % [~,~,~,Tx5,~,~,~,omega5,STFT] = SST_N(signal',fs);
 % [Tx3,Tx31,omega3,omega31] = ASST_with_statistical_denoising(signal',fs);
-[Tx3,Tx31,omega3,omega31] = MeinSST2_2(signal',fs);
+[Tx3,Tx31,omega3,omega31] = ASST(signal',fs);
 
 clr = 128;
 figure(3);set(gcf, 'NumberTitle','off','Name','STFT');
